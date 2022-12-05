@@ -11,49 +11,51 @@
 
 <body>
     <section class="section">
-        <div class="header-container">
-            <span class="inscription">(Booking)</span>
-            <header class="header">
-                <h1 class="heading">Send <span class="heading__italic">an email</span></h1>
-                <p class="header__paragraph">If you have a general or project enquiry, please
-                    drop me an email — available now</p>
-            </header>
-        </div>
-        <form class="form" action="" method="post">
-            <div class="form-item">
-                <label for="email">Email</label>
-                <input name="email" id="email" type="email" placeholder="Your email" tabindex="1" required />
+        <div class="container">
+            <div class="header-container">
+                <span class="inscription">(Booking)</span>
+                <header class="header">
+                    <h1 class="heading">Send <span class="heading__italic">an email</span></h1>
+                    <p class="header__paragraph">If you have a general or project enquiry, please
+                        drop me an email — available now</p>
+                </header>
             </div>
-
-            <div class="form-item">
-                <label for="name">Name</label>
-                <input name="name" id="name" type="name" placeholder="Your name" tabindex="2" required />
-            </div>
-
-            <div class="form-item">
-                <label for="text">Message</label>
-                <input name="text" id="text" type="text" placeholder="Start typing here" tabindex="3" required />
-            </div>
-
-            <div class="form-item">
-                <label for="select">Project type</label>
-                <div class="select-container">
-                    <input placeholder="Choose" disabled />
-                    <select name="select" id="select" tabindex="4" required>
-                        <option value="1">Reserve for personal event</option>
-                        <option value="2">Buy tickets for a next concert</option>
-                        <option value="3">Reserve from a venue</option>
-                        <option value="4">Other</option>
-                    </select>
+            <form class="form" action="" method="post">
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <input name="email" id="email" type="email" placeholder="Your email" tabindex="1" required />
                 </div>
-            </div>
 
-            <div class="form-item checkbox-container">
-                <input name="checkbox" type="checkbox" tabindex="5" required />
-                <label class="check-box-label">I agree to receive ocasional newsletter with latest news and
-                    updates</label>
-            </div>
-        </form>
+                <div class="form-item">
+                    <label for="name">Name</label>
+                    <input name="name" id="name" type="name" placeholder="Your name" tabindex="2" required />
+                </div>
+
+                <div class="form-item">
+                    <label for="text">Message</label>
+                    <input name="text" id="text" type="text" placeholder="Start typing here" tabindex="3" required />
+                </div>
+
+                <div class="form-item">
+                    <label for="select">Project type</label>
+                    <div class="select-container">
+                        <input placeholder="Choose" disabled />
+                        <select name="select" id="select" tabindex="4" required>
+                            <option value="1">Reserve for personal event</option>
+                            <option value="2">Buy tickets for a next concert</option>
+                            <option value="3">Reserve from a venue</option>
+                            <option value="4">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-item checkbox-container">
+                    <input name="checkbox" type="checkbox" tabindex="5" required />
+                    <label class="check-box-label">I agree to receive ocasional newsletter with latest news and
+                        updates</label>
+                </div>
+            </form>
+        </div>
     </section>
 </body>
 
