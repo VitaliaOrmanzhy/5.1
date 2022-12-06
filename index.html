@@ -37,8 +37,8 @@
                 <div class="form-item">
                     <label for="select" class="label">Project type</label>
                     <div class="select-container">
-                        <input class="input" placeholder="Choose" disabled />
                         <select name="select" id="select" tabindex="4" required>
+                            <option disabled selected class="hidd">Choose</option>
                             <option value="1">Reserve for personal event</option>
                             <option value="2">Buy tickets for a next concert</option>
                             <option value="3">Reserve from a venue</option>
@@ -48,10 +48,18 @@
                 </div>
 
                 <div class="form-item-checkbox-container">
-                    <input class="checkbox-input" name="checkbox" type="checkbox" tabindex="5" required />
-                    <label class="check-box-label">I agree to receive ocasional newsletter with latest news and
+                    <input class="checkbox__input" name="checkbox" type="checkbox" tabindex="5" required />
+                    <label class="checkbox__label">I agree to receive ocasional newsletter with latest news and
                         updates</label>
                 </div>
+
+                <div class="button-container">
+                <button type="submit" class="form__button">
+                    <span class="form__button__line">_</span>
+                    <span class="form__button__text">Send</span>
+                </button>
+                </div>
+                
             </form>
         </div>
     </section>
