@@ -13,11 +13,13 @@
     <section class="section">
         <div class="container">
                 <span class="inscription">(Booking)</span>
-                <header class="header">
-                    <h1 class="heading">Send <span class="heading__italic">an email</span></h1>
-                    <p class="header__paragraph">If you have a general or project enquiry, please
-                        drop me an email — available now</p>
-                </header>
+                <div class="text-container">
+                    <header class="header">
+                        <h1 class="heading">Send <span class="heading__italic">an email</span></h1>
+                    </header>
+                    <p class="text-container__paragraph">If you have a general or project enquiry, please
+                            drop me an email — available now</p>
+                </div>
             <form class="form" action="" method="post">
                 <div class="form-item">
                     <label for="email" class="label">Email</label>
@@ -37,8 +39,8 @@
                 <div class="form-item">
                     <label for="select" class="label">Project type</label>
                     <div class="select-container">
-                        <select name="select" id="select" tabindex="4" required>
-                            <option disabled selected class="hidd">Choose</option>
+                        <select class="select" name="select" id="select" tabindex="4" required>
+                            <option selected class="hidd">Choose</option>
                             <option value="1">Reserve for personal event</option>
                             <option value="2">Buy tickets for a next concert</option>
                             <option value="3">Reserve from a venue</option>
@@ -47,7 +49,7 @@
                     </div>
                 </div>
 
-                <div class="form-item-checkbox-container">
+                <div class="form-item checkbox-container">
                     <input class="checkbox__input" name="checkbox" type="checkbox" tabindex="5" required />
                     <label class="checkbox__label">I agree to receive ocasional newsletter with latest news and
                         updates</label>
@@ -55,8 +57,8 @@
 
                 <div class="button-container">
                 <button type="submit" class="form__button">
-                    <span class="form__button__line">_</span>
-                    <span class="form__button__text">Send</span>
+                    <img class="line" src="img/line.svg"/>
+                    <span class="button__text">Send</span>
                 </button>
                 </div>
                 

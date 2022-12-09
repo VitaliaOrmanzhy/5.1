@@ -1,69 +1,77 @@
 @font-face {
     font-family: 'Ogg';
-    src: url(/fonts/OggRegular.ttf) format(opentype),
-    url(/fonts/OggRegular.otf) format(opentype),
-    url(/fonts/OggRegular.woff) format(woff),
-    url(/fonts/OggRegular.woff2) format(woff2);
+    src: url('/fonts/OggRegular.ttf') format('opentype'),
+        url('/fonts/OggRegular.otf') format('opentype'),
+        url('/fonts/OggRegular.woff') format('woff'),
+        url('/fonts/OggRegular.woff2') format('woff2');
     font-style: normal;
     font-weight: 400;
-    display: optional;
+    display: swap;
 }
 
 @font-face {
     font-family: 'Ogg';
-    src: url(/fonts/Ogg-RegularItalic.ttf) format(opentype),
-    url(/fonts/Ogg-RegularItalic.otf) format(opentype),
-    url(/fonts/Ogg-RegularItalic.woff) format(woff),
-    url(/fonts/Ogg-RegularItalic.woff2) format(woff2);
+    src: url('/fonts/Ogg-RegularItalic.ttf') format('opentype'),
+        url('/fonts/Ogg-RegularItalic.otf') format('opentype'),
+        url('/fonts/Ogg-RegularItalic.woff') format('woff'),
+        url('/fonts/Ogg-RegularItalic.woff2') format('woff2');
     font-style: italic;
     font-weight: 400;
-    display: optional;
+    display: swap;
 }
 
 @font-face {
     font-family: 'Ogg';
-    src: url(/fonts/OggLightItalic.ttf) format(opentype),
-    url(/fonts/OggLightItalic.otf) format(opentype),
-    url(/fonts/OggLightItalic.woff) format(woff),
-    url(/fonts/OggLightItalic.woff2) format(woff2);
+    src: url('/fonts/OggLightItalic.ttf') format('opentype'),
+        url('/fonts/OggLightItalic.otf') format('opentype'),
+        url('/fonts/OggLightItalic.woff') format('woff'),
+        url('/fonts/OggLightItalic.woff2') format('woff2');
     font-style: italic;
     font-weight: 300;
-    display: optional;
+    display: swap;
 }
 
 @font-face {
-    font-family: 'Trade Gothic LT Extended';
-    src: url(/fonts/Trade\ Gothic\ LT\ Extended.otf) format(opentype),
-    url(/fonts/Trade\ Gothic\ LT\ Extended.ttf) format(opentype),
-    url(/fonts/Trade\ Gothic\ LT\ Extended.woff) format(woff),
-    url(/fonts/Trade\ Gothic\ LT\ Extended.woff2) format(woff2);
+    font-family: 'Trade Gothic';
+    src: url('/fonts/Trade\ Gothic\ LT\ Extended.otf') format('opentype'),
+        url('/fonts/Trade\ Gothic\ LT\ Extended.ttf') format('opentype'),
+        url('/fonts/Trade\ Gothic\ LT\ Extended.woff') format('woff'),
+        url('/fonts/Trade\ Gothic\ LT\ Extended.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
-    display: optional;
+    display: swap;
 }
 
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .container {
-    max-width: 1360px;
-    padding: 0 20px;
+    max-width: 1380px;
+    padding: 0 30px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.section {
+    padding: 200px 0 144px 0;
 }
 
 .inscription {
+    font-family: 'Trade Gothic';
+    font-size: 16px;
+    color: #000000;
+    opacity: 0.55;
     grid-column: 1 / 2;
     margin-right: 25px;
-    margin-top: 15px;
+    margin-top: 18px;
     justify-self: end;
 }
 
-.header {
+.text-container {
     margin-left: 85px;
     margin-bottom: 100px;
     font-family: 'Ogg';
@@ -87,8 +95,8 @@
     font-weight: 400;
 }
 
-.header__paragraph {
-    font-family: 'Trade Gothic LT Extended';
+.text-container__paragraph {
+    font-family: 'Trade Gothic';
     color: #71870E;
     font-size: 16px;
     max-width: 420px;
@@ -98,4 +106,146 @@
 .form {
     grid-column: 2 / 4;
     grid-row: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.form-item {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.label {
+    font-family: 'Ogg';
+    font-size: 16px;
+}
+
+.input {
+    font-family: 'Trade Gothic';
+    font-size: 16px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 10px;
+    opacity: 0.55;
+    outline: none;
+    cursor: pointer;
+}
+
+.select-container {
+    font-family: 'Trade Gothic';
+    display: flex;
+    cursor: pointer;
+    position: relative;
+}
+
+.select option::selection {
+    font-family: 'Trade Gothic';
+}
+
+.select-container::after {
+    content: '';
+    width: 20px;
+    height: 18px;
+    background-image: url(/img/Polygon\ 1.svg);
+    background-size: cover;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    pointer-events: none;
+}
+
+.select {
+    appearance: none;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #000000;
+    opacity: 0.55;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+option {
+    font-family: 'Trade Gothic';
+}
+
+.hidd {
+    font-family: 'Trade Gothic';
+    font-size: 16px;
+    display: none;
+}
+
+.input::placeholder {
+    font-family: 'Trade Gothic';
+    font-size: 16px;
+}
+
+
+.checkbox__label {
+    position: relative;
+    font-family: 'Ogg';
+    font-style: normal;
+    font-weight: 300;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    align-items: baseline;
+}
+
+.button__text {
+    font-family: 'Trade Gothic';
+    font-size: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form__button {
+    color: #D0A049;
+    border: none;
+    background-color: transparent;
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .text-container {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .text-container__paragraph {
+        align-self: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 850px) {
+    .inscription {
+        display: none;
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .text-container {
+        grid-column: 1 / 5;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 426px) {
+    .form {
+        grid-column: 1 / 5;
+    }
 }
