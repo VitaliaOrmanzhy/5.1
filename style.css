@@ -48,6 +48,11 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #fff;
+    font-family: 'Trade Gothic';
+}
+
 .container {
     max-width: 1380px;
     padding: 0 30px;
@@ -56,12 +61,15 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
+.special-font {
+    font-family: 'Ogg';
+}
+
 .section {
     padding: 200px 0 144px 0;
 }
 
 .inscription {
-    font-family: 'Trade Gothic';
     font-size: 16px;
     color: #000000;
     opacity: 0.55;
@@ -74,29 +82,26 @@
 .text-container {
     margin-left: 85px;
     margin-bottom: 100px;
-    font-family: 'Ogg';
+    max-width: 570px;
     font-weight: 400;
     font-size: 60px;
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
     display: flex;
     flex-direction: column;
     gap: 100px;
 }
 
 .heading {
-    font-family: 'Ogg';
     font-weight: 400;
     font-size: 60px;
 }
 
 .heading__italic {
-    font-family: 'Ogg';
     font-style: italic;
     font-weight: 400;
 }
 
 .text-container__paragraph {
-    font-family: 'Trade Gothic';
     color: #71870E;
     font-size: 16px;
     max-width: 420px;
@@ -104,7 +109,9 @@
 }
 
 .form {
-    grid-column: 2 / 4;
+    grid-column: 2 / 5;
+    margin-left: 85px;
+    max-width: 605px;
     grid-row: 2 / 3;
     display: flex;
     flex-direction: column;
@@ -135,14 +142,9 @@
 }
 
 .select-container {
-    font-family: 'Trade Gothic';
     display: flex;
     cursor: pointer;
     position: relative;
-}
-
-.select option::selection {
-    font-family: 'Trade Gothic';
 }
 
 .select-container::after {
@@ -169,11 +171,15 @@
 }
 
 option {
-    font-family: 'Trade Gothic';
+    margin: 5px 0;
+}
+
+option:hover {
+    background-color: rgb(46, 46, 248);
+    color: #fff;
 }
 
 .hidd {
-    font-family: 'Trade Gothic';
     font-size: 16px;
     display: none;
 }
@@ -186,7 +192,6 @@ option {
 
 .checkbox__label {
     position: relative;
-    font-family: 'Ogg';
     font-style: normal;
     font-weight: 300;
 }
@@ -199,7 +204,7 @@ option {
 }
 
 .button__text {
-    font-family: 'Trade Gothic';
+    font-family: 'Trade Gothic', sans-serif;
     font-size: 16px;
 }
 
@@ -217,30 +222,31 @@ option {
     align-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1040px) {
     .text-container {
-        margin-left: 0;
-        align-items: center;
-    }
-
-    .text-container__paragraph {
-        align-self: center;
-        text-align: center;
+        gap: 40px;
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 870px) {
     .inscription {
         display: none;
+    }
+
+    .text-container {
+        margin-left: 0;
+        max-width: unset;
+        grid-column: 1 / 5;
     }
 
     .section {
         padding: 100px 0;
     }
 
-    .text-container {
+    .form {
+        max-width: unset;
         grid-column: 1 / 5;
-        gap: 40px;
+        margin-left: 0;
     }
 }
 
